@@ -5,8 +5,6 @@
  require(lme4)
  require(effects)
  require(car)
- require(glmmTMB)
-
 
 #Multiplots: to join plots together
 #From: http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/

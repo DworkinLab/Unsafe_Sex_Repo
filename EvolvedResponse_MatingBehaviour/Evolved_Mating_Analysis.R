@@ -2,6 +2,7 @@
 
 # Source cleaning data script:
   source("Evolved_Mating_CleanData.R")
+  
 
 ### Models: 4 analysis done: Courtship Latency, Copulation Latency, Copulation Duration, and copulation occurance (proportion)
   
@@ -107,7 +108,7 @@
                            (1|Date) + (1|Treatment:Rep), 
                          family = "binomial", 
                          data = AP_Data)
-  
+  require(glmmTMB)
   TMB_mod_cop_count <- glmmTMB(Copulation ~ 1 + Treatment*AgeBin + 
                                 (1|Date) + (1|Treatment:Rep), 
                            family = "binomial", 
