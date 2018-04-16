@@ -1,7 +1,16 @@
-### Outline of experiments and summary of data
+## Outline of experiments and summary of data for Plastic Response to Spider predators
 
-Courtship hypothesis, methods and summary of results
+### Brief Methods used:
 
+  Wild population of flies used collected in 2014 in Southern Ontario. Predators used were zebra jumping spiders (*Salticus scenicus*) were collected along warm sunlight walls around McMaster University campus and fed laboratory flies.
+  
+  Using immature females (under 24 hours old, reject all copulations), male courtship displays were recorded.
+  
+  At 8:00 am, a male was added (via aspiration) to a modified 4 cm wide petri dish that has a layer of mesh separating the flies (on top) and a spider (if present) on the bottom, with a video recording from above. Videos were scored for 15 minutes of mating pair behaviours, recording each courtship bout and length of bout.
+  
+### Prediction:
+
+  Males will display a lower  proportion of time courting and number of courtship bouts in the presence of predators. 
 
 ### Data Layout after cleaning:
 ```
