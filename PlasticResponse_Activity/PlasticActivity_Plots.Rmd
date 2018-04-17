@@ -1,0 +1,34 @@
+---
+title: 'Plastic Response To Predation Cues: Activity'
+output:
+  html_document: default
+---
+
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./Scripts/')
+source('packages.R')
+source('SpiderCues_ActivityAnalysis.R')
+source('MantidCues_ActivityAnalysis.R')
+source('ComplexCues_ActivityAnalysis.R')
+source('Cricket-Spider_ActivityAnalysis.R')
+```
+
+### Spider Cues vs. Control (no cues)
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(spider_plot3, spi_plot3, cols = 2)
+```
+
+### Mantid Cues vs. Control (no cues)
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(mantid_plot4, Man_plot3, cols = 2)
+```
+
+### Cricket Cues vs. Spider Cues
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(Exp2_plot4, plot_Exp2_3, cols = 2)
+```
+
+### Spiders fed Flies vs. Crickets vs. Flies vs. Spiders fed Crickets
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(Exp3_plot3, plot_Exp3_3, cols = 2)
+```

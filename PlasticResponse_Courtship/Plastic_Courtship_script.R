@@ -90,7 +90,7 @@
     xlab("") +
     ylim(0,1) +
     geom_point(stat="identity", 
-               position = position_dodge(.9), size=5, show.legend = F) +
+               position = position_dodge(.9), size=6, show.legend = F) +
     geom_errorbar(aes(ymin = lower, ymax = upper), 
                   position = position_dodge(.9), 
                   size = 1.2, 
@@ -122,7 +122,7 @@
     xlab("") +
     ylim(9,20) +
     geom_point(stat="identity", 
-               position = position_dodge(.9), size=5, show.legend = F) +
+               position = position_dodge(.9), size=6, show.legend = F) +
     geom_errorbar(aes(ymin = lower, ymax = upper), 
                   position = position_dodge(.9), 
                   size = 1.2, 
@@ -131,6 +131,7 @@
           #     axis.text.x=element_blank(),
           axis.text.x= element_text(size=12.5),
           axis.ticks.x=element_blank()) +
+    scale_shape_manual(values=c(15, 17))+
     scale_color_manual(values=c("#999999", "#E69F00"))
   
   print(gg_courtcount2)

@@ -1,4 +1,5 @@
 # Source Cleaned data (and packages)
+#setwd("../../EvolvedResponse_Activity/")
 source('Evolved_Activity_Clean.R')
 
 # Visualization Plots:
@@ -10,7 +11,8 @@ LT_plot2 <- LT_plot + geom_jitter(size=0.5) + geom_smooth(method = "loess") +
            ymin = 0, ymax = 600) +
   labs(y="Hourly Activity Counts", 
        x="Hour") +
-  theme(text = element_text(size=15), 
+  theme(text = element_text(size=15),
+        legend.text=element_text(size=12),
         axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
   scale_colour_manual(values=c("#999999",  "#56B4E9", "#E69F00"))
 print(LT_plot2)
@@ -35,20 +37,28 @@ Evolve_plot <- effect("Treatment*light", mod_trial_2)
 Evolve_plot <- as.data.frame(Evolve_plot)
 
 Evolve_plot2 <- ggplot(Evolve_plot, 
-                       aes(y=fit, x=light, shape=Treatment))
+                       aes(y=fit, x=light, shape=Treatment, size=Treatment))
 
 Evolve_plot3 <- Evolve_plot2 +
   geom_point(stat="identity", 
-             position=position_dodge(0.5), size=5) + 
+             position=position_dodge(0.5))+#, size=5) + 
   geom_linerange(aes(ymin=lower, ymax=upper), 
                  position = position_dodge(0.5), size=1.5) + 
   labs(y="Hourly Activity Count", 
        x="Phase") +
-  theme(text = element_text(size=15), 
+  theme(text = element_text(size=15),
+        legend.text=element_text(size=12),
         axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
+  scale_shape_manual(values=c(15, 18, 17))+
+  scale_size_manual(values=c(6,8,6))+
   scale_colour_manual(values=
                         c("#999999", "#56B4E9", "#E69F00"))
 print(Evolve_plot3)
 
-
+#Evolve_plot3 + theme(legend.position = c(0.9, 0.22))
+Evolve_plot4 <- Evolve_plot3 + theme(legend.justification=c(0,1), legend.position=c(0.01,0.99))
+LT_plot3 <- LT_plot2 + theme(legend.justification=c(0,1), legend.position=c(0.01,0.99))
 multiplot(Evolve_plot3, LT_plot2, cols = 2)
+multiplot(Evolve_plot4, LT_plot3, cols = 2)
+
+

@@ -82,3 +82,9 @@ source('packages.R')
   Exp3_hour$Treatment <- as.factor(Exp3_hour$Treatment)
   Exp3_hour$light <- as.factor(Exp3_hour$light)
   
+  #Change Treatment:
+  summary(Exp3_hour$Treatment)
+  Exp3_hour <- within(Exp3_hour, {Cues = ifelse (Treatment == "C", "Cricket", ifelse(Treatment == "F", "Fly", ifelse(Treatment == "SC", "Spider Fed Crickets", "Spider Fed Flies")))})
+  
+  Exp3_hour$Cues <- as.factor(Exp3_hour$Cues)
+  

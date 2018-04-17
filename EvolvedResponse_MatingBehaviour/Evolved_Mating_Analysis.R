@@ -21,11 +21,11 @@
   courtLat <- as.data.frame(courtLat)
   
   latenCourt <- ggplot(courtLat, 
-                       aes(y=fit, x=AgeBin, shape=Treatment))
+                       aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
   latenCourt2 <- latenCourt + 
     geom_point(stat="identity", 
-               position=position_dodge(0.5), size=5) + 
+               position=position_dodge(0.5)) + 
     geom_linerange(aes(ymin=lower, ymax=upper), 
                    position = position_dodge(0.5), size=1.5) + 
     labs(y="Copulation Latency (sec)", 
@@ -33,6 +33,8 @@
     #ggtitle("Courtship Latency") + 
     theme(text = element_text(size=15), 
           axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
+    scale_shape_manual(values=c(15, 18, 17))+
+    scale_size_manual(values = c(6,8,6)) +
     scale_colour_manual(values=
                           c("#999999", "#56B4E9", "#E69F00"))
   
@@ -52,11 +54,11 @@
   copLate <- as.data.frame(copLate)
   
   LatenCop <- ggplot(copLate, 
-                     aes(y=fit, x=AgeBin, shape=Treatment))
+                     aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
   LatenCop2 <-  LatenCop + 
     geom_point(stat="identity", 
-               position=position_dodge(0.5), size=5) + 
+               position=position_dodge(0.5)) + 
     geom_linerange(aes(ymin=lower, ymax=upper), 
                    position = position_dodge(0.5), size=1.5) + 
     labs(y="Copulation Latency (sec)", 
@@ -64,6 +66,8 @@
     #ggtitle("Copulation Latency") + 
     theme(text = element_text(size=15), 
           axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
+    scale_shape_manual(values=c(15, 18, 17))+
+    scale_size_manual(values = c(6,8,6)) +
     scale_colour_manual(values=
                           c("#999999", "#56B4E9", "#E69F00"))
   
@@ -84,11 +88,11 @@
   copdur_plot <- as.data.frame(copdur_plot)
   
   DuratCop <- ggplot(copdur_plot, 
-                     aes(y=fit, x=AgeBin, shape=Treatment))
+                     aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
   DuratCop2 <- DuratCop + 
     geom_point(stat="identity", 
-               position=position_dodge(0.5), size=5) + 
+               position=position_dodge(0.5)) + 
     geom_linerange(aes(ymin=lower, ymax=upper), 
                    position = position_dodge(0.5), size=1.5) + 
     labs(y="Copulation Duration (sec)", 
@@ -96,6 +100,8 @@
     #ggtitle("Copulation Duration") + 
     theme(text = element_text(size=15), 
           axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
+    scale_shape_manual(values=c(15, 18, 17))+
+    scale_size_manual(values = c(6,8,6)) +
     scale_colour_manual(values=
                           c("#999999", "#56B4E9", "#E69F00"))
   
@@ -124,11 +130,11 @@
   cop_prop_plot_glmer <- as.data.frame(cop_prop_plot_glmer)
   
   propCop_glmer <- ggplot(cop_prop_plot_glmer, 
-                          aes(y=fit, x=AgeBin, shape=Treatment))
+                          aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
   propCop_glmer_2 <- propCop_glmer + 
     geom_point(stat="identity", 
-               position=position_dodge(0.5), size=5) + 
+               position=position_dodge(0.5)) + 
     geom_linerange(aes(ymin=lower, ymax=upper), 
                    position = position_dodge(0.5), size=1.5) + 
     labs(y="Proportion of copulations", 
@@ -136,6 +142,8 @@
     #ggtitle("Copulation Proportion") + 
     theme(text = element_text(size=15), 
           axis.text.x= element_text(size=15)) +
+    scale_shape_manual(values=c(15, 18, 17))+
+    scale_size_manual(values = c(6,8,6)) +
     scale_colour_manual(values=
                           c("#999999", "#56B4E9", "#E69F00"))
   
@@ -155,11 +163,11 @@
   cop_prop_plot2 <- as.data.frame(cop_prop_plot2)
   
   propCop4 <- ggplot(cop_prop_plot2, 
-                     aes(y=fit, x=AgeBin, shape=Treatment))
+                     aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
   propCop3 <- propCop4 + 
     geom_point(stat="identity", 
-               position=position_dodge(0.5), size=5) + 
+               position=position_dodge(0.5)) + 
     geom_linerange(aes(ymin=lower, ymax=upper), 
                    position = position_dodge(0.5), size=1.5) + 
     labs(y="Proportion of Copulations", 
@@ -167,6 +175,8 @@
     #ggtitle("Copulation Proportion") + 
     theme(text = element_text(size=15), 
           axis.text.x= element_text(size=12.5), axis.text.y= element_text(size=12.5)) +
+    scale_shape_manual(values=c(15, 18, 17))+
+    scale_size_manual(values = c(6,8,6)) +
     scale_colour_manual(values=
                           c("#999999", "#56B4E9", "#E69F00"))
   

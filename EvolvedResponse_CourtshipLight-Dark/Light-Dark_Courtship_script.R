@@ -37,16 +37,18 @@
 
 ### Create Plot of data:
 stuff_plot2 <- ggplot(stuff_plot, 
-                      aes(y=fit, x=Phase, shape=Treatment)) +
+                      aes(y=fit, x=Phase, shape=Treatment, size=Treatment)) +
   geom_point(stat="identity", 
-             position=position_dodge(0.5), size=7) + 
+             position=position_dodge(0.5)) + 
   geom_linerange(aes(ymin=lower, ymax=upper), 
                  position = position_dodge(0.5), size=1.5) + 
-  labs(y="Proportion", 
+  labs(y="Proportion Time Courting", 
        x="Phase") +
-  theme(text = element_text(size=20), 
-        axis.text.x= element_text(size=15),
-        axis.text.y= element_text(size=15))
+  scale_shape_manual(values=c(15, 18, 17))+
+  scale_size_manual(values = c(6,8,6)) +
+  theme(text = element_text(size=15), 
+        axis.text.x= element_text(size=12.5),
+        axis.text.y= element_text(size=12.5))
   # If colours wanted: create colour=Treatment
   #scale_colour_manual(values=
   #                     c("#999999", "#56B4E9", "#E69F00"))

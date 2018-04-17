@@ -1,0 +1,122 @@
+---
+title: "All Behavioural Plots"
+output: html_document
+---
+________________________________________________________________
+# All plots that have been created in the Plastic and Evolved Directories that may be present in the paper:
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Activity
+
+Plots show the hourly activity between light and dark times (left) and the daily patterns of hourly activity (right)
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./PlasticResponse_Activity/Scripts/')
+source('packages.R')
+source('SpiderCues_ActivityAnalysis.R')
+source('MantidCues_ActivityAnalysis.R')
+source('ComplexCues_ActivityAnalysis.R')
+source('Cricket-Spider_ActivityAnalysis.R')
+```
+
+### Spider Cues vs. Control (no cues)
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(spider_plot3, spi_plot3, cols = 2)
+```
+
+### Mantid Cues vs. Control (no cues)
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(mantid_plot4, Man_plot3, cols = 2)
+```
+
+### Cricket Cues vs. Spider Cues
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(Exp2_plot4, plot_Exp2_3, cols = 2)
+```
+
+### Spiders fed Flies vs. Crickets vs. Flies vs. Spiders fed Crickets
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(Exp3_plot3, plot_Exp3_3, cols = 2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Activity
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_Activity/')
+source('packages.R')
+source('Evolved_Activity_Analysis.R')
+```
+
+### Evolved populations activity when no predators are present
+
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(Evolve_plot4, LT_plot3, cols = 2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Courtship
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./PlasticResponse_Courtship/')
+source('packages.R')
+source('Plastic_Courtship_script.R')
+```
+
+### Courtship Proportion and Counts:
+
+Courtship proportion (left) and the count of courtship bouts (right) a mature male displayed to an immature female in a 15 minute recording
+
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(gg_courtProp2, gg_courtcount2, cols=2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Copulation
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./PlasticResponse_Copulation/')
+source('packages.R')
+source('Plastic_Copulation_Script.R')
+```
+
+### Copulation Proportion, Latency and Duration
+
+Copulation duration (left) and latency (middle) for a mature mating pair, as well as the proportion of successful copulations in 30 minutes (right)
+
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
+multiplot(gg_copdur2, gg_coplat2, gg_copprop2, cols=3)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Mating Behaviours
+
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_MatingBehaviour/')
+source('packages.R')
+source('Evolved_Mating_Analysis.R')
+```
+
+### Evolved Mating Behaviours: 
+
+Courtship Latency (top left), as well as Copulation Latency (top right) and Duration (bottom left) for evolved popualtions exposed to predation selection from Spiders or Mantids, or controls with no predator exposure. The proportion of successful copulations (bottom right) is also shown. 
+
+Age Bins correspond number of days old the flies were: 1) 1-3, 2) 4-7, 3) 8-11 and 4) 12-15).
+
+```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=10}
+multiplot(latenCourt2, LatenCop2, DuratCop2, propCop_glmer_2, cols=2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Mating Behaviours Light vs. Dark
+
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_CourtshipLight-Dark/')
+source('Light-Dark_Courtship_script.R')
+```
+
+```{r, warning=FALSE, echo=FALSE, fig.width=6.25, fig.height=5}
+print(stuff_plot2)
+```
+
