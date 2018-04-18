@@ -162,6 +162,9 @@
   cop_prop_plot2 <- effect("Treatment*AgeBin", mod_cop_count_glm)
   cop_prop_plot2 <- as.data.frame(cop_prop_plot2)
   
+#Change the error bars of Spider Age bin 4 (all = 1.00, so error == 0)
+  cop_prop_plot2$lower <- ifelse(cop_prop_plot2$Treatment=="Spiders" & cop_prop_plot2$AgeBin==4, 1.00, cop_prop_plot2$lower )
+  
   propCop4 <- ggplot(cop_prop_plot2, 
                      aes(y=fit, x=AgeBin, shape=Treatment, size=Treatment))
   
@@ -183,4 +186,4 @@
   propCop3
   
   
-  multiplot(latenCourt2, LatenCop2, DuratCop2, propCop_glmer_2, cols=2)
+  multiplot(latenCourt2, LatenCop2, DuratCop2, propCop3, cols=2)

@@ -1,0 +1,243 @@
+---
+title: "All Behavioural Summary and Anova"
+output: html_document
+---
+________________________________________________________________
+# All Anova and summary statistics from behavioural experiments:
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Activity
+
+Summary Statistics from each activity experiment: Can open reference scripts for more information:
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+setwd('./PlasticResponse_Activity/Scripts/')
+source('packages.R')
+source('SpiderCues_ActivityAnalysis.R')
+source('MantidCues_ActivityAnalysis.R')
+source('ComplexCues_ActivityAnalysis.R')
+source('Cricket-Spider_ActivityAnalysis.R')
+```
+
+Note: hour2 == pi*hour/12
+
+### Spider Cues vs. Control (no cues)
+```
+  spider_mod_spli_2 <- lmer(activity_counts ~ Treatment*light + sin(hour2) + cos(hour2)  + monitor
+                            + (1 + light | individual), data=act_hour)
+```
+```{r, warning=FALSE}
+  summary(spider_mod_spli_2)
+  car::Anova(spider_mod_spli_2)
+```
+
+### Mantid Cues vs. Control (no cues)
+```
+  mantid_mod_spli_2 <- lmer(activity_counts ~ Treatment*light + sin(hour2) + cos(hour2)  + monitor
+                            + (1 + light | individual), data=Mantid_hour)
+```
+```{r, warning=FALSE}
+  summary(mantid_mod_spli_2)
+  car::Anova(mantid_mod_spli_2)
+```
+
+### Cricket Cues vs. Spider Cues
+```
+ Exp2_mod_spli_2 <- lmer(activity_counts ~ sin(hour2) + cos(hour2) + Treatment*light + monitor
+                          + (1 + light | individual), data=Exp2_hour)
+```
+```{r, warning=FALSE}
+  summary(Exp2_mod_spli_2)
+  car::Anova(Exp2_mod_spli_2)
+```
+
+### Spiders fed Flies vs. Crickets vs. Flies vs. Spiders fed Crickets
+```
+  Exp3_mod_spli_2 <- lmer(activity_counts ~ sin(hour2) + cos(hour2) + Cues*light + monitor
+                          + (1 + light | individual), data=Exp3_hour)
+```
+```{r, warning=FALSE}
+  summary(Exp3_mod_spli_2)
+  car::Anova(Exp3_mod_spli_2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Activity
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_Activity/')
+source('packages.R')
+source('Evolved_Activity_Analysis.R')
+```
+
+### Evolved populations activity when no predators are present
+```
+#hour2 == pi*hour/12
+
+mod_trial_2 <- lmer(Hourly_activity ~ sin(hour2) + cos(hour2) + Treatment + Treatment:Population + light + light:Treatment + start_day + monitor
+                    + (1 + light | individual), data=dat.hourly)
+```
+```{r, warning=FALSE}
+summary(mod_trial_2)
+car::Anova(mod_trial_2)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Courtship
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./PlasticResponse_Courtship/')
+source('packages.R')
+source('Plastic_Courtship_script.R')
+```
+
+### Courtship Proportion and Counts:
+
+**Proportion of time Courting**
+```
+courtship_model1 <- lmer(court_prop ~ Treatment + 
+                             (1|Date), 
+                           data=courtship2 )
+```
+
+```{r, warning=FALSE}
+  summary(courtship_model1)
+  car::Anova(courtship_model1)
+```
+
+
+**Number of Courtship attempts in 15 minutes**
+```
+courtship_model2 <- lmer(count ~ Treatment  + 
+                             (1|Date), 
+                           data = courtship2)
+```
+
+```{r, warning=FALSE}
+summary(courtship_model2)
+car::Anova(courtship_model2)
+```
+________________________________________________________________
+________________________________________________________________
+## Plastic Response: Copulation
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./PlasticResponse_Copulation/')
+source('packages.R')
+source('Plastic_Copulation_Script.R')
+```
+
+**Copulation Latency**
+```
+copul_lat_mod <- lmer(Cop_latency ~ Treatment + (1|Date), 
+                      data = copulation2)
+```
+```{r, warning=FALSE}
+summary(copul_lat_mod)
+car::Anova(copul_lat_mod)
+```
+
+**Copulation Duration**
+```
+copul_dur_Mod <- lmer(Cop_Duration ~ Treatment + (1|Date), 
+                      data = copulation2)
+```
+```{r, warning=FALSE}
+summary(copul_dur_Mod)
+car::Anova(copul_dur_Mod)
+```
+
+
+**Copulation Proportion**
+
+```
+copprop_mod <- glmer(copulationSuccess ~ Treatment + (1|Date),
+                     data = copulation, family = "binomial")
+```
+
+```{r, warning=FALSE}
+  summary(copprop_mod)
+  car::Anova(copprop_mod)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Mating Behaviours
+
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_MatingBehaviour/')
+source('packages.R')
+source('Evolved_Mating_Analysis.R')
+```
+
+### Evolved Mating Behaviours: 
+
+Age Bins correspond number of days old the flies were: 1) 1-3, 2) 4-7, 3) 8-11 and 4) 12-15).
+
+**Courtship Latency**
+```
+  mod_court <- lmer(Rel_Court_lat ~ 1 + Treatment*AgeBin + 
+                      (1|Date) + (1|Treatment:Rep), 
+                    data = AP_Data)
+```
+```{r, warning=FALSE}
+  summary(mod_court)
+  car::Anova(mod_court)
+```
+
+**Copulation Latency**
+```
+  mod_copl_plot <- lmer(Rel_Cop_lat ~ 1+ Treatment*AgeBin + 
+                          (1|Date) + (1|Treatment:Rep), 
+                        data = AP_Data)
+```
+```{r, warning=FALSE}
+  summary(mod_copl_plot)
+  Anova(mod_copl_plot)
+```
+**Copulation Duration**
+```
+ mod_copd_plot <- lmer(Rel_Cop_dur ~ 1+ Treatment*AgeBin + 
+                          (1|Date) + (1|Treatment:Rep), 
+                        data = AP_Data)
+```
+```{r, warning=FALSE}
+  summary(mod_copd_plot)
+  Anova(mod_copd_plot)
+```
+**Copulation Proportion**
+
+Note: Model below is simpified version from origional attempts: some issue with data (presuambly perfect seperation issue) with one age bin*treatment having all 100% sucessful copulations (other attempts == glmer and glmmTMB), but this method was deemed a sufficient method
+```
+mod_cop_count_glm <- glm(Copulation ~ 1 + Treatment*AgeBin, 
+                           family = "binomial", 
+                           data = AP_Data)
+```
+
+```{r, warning=FALSE}
+summary(mod_cop_count_glm)
+Anova(mod_cop_count_glm)
+```
+
+________________________________________________________________
+________________________________________________________________
+## Evolved Response: Mating Behaviours Light vs. Dark
+
+```{r, warning=FALSE, include=FALSE, echo=FALSE}
+setwd('./EvolvedResponse_CourtshipLight-Dark/')
+source('Light-Dark_Courtship_script.R')
+```
+
+The Model:
+
+```
+  stuff2 <- lmer(P_court ~ Treatment*Phase + Observer + 
+                   (1|Day) + (1|Treatment:Population), 
+                 data=court)
+  
+
+```
+
+```{r, warning=FALSE}
+  summary(stuff2)
+  car::Anova(stuff2)
+```
+
