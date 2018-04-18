@@ -1,7 +1,5 @@
 ### Summary of Copulation Experiments with wild caught flies
 
-
-
 ### Brief Methods used:
   Wild population of flies used collected in 2014 in Southern Ontario. Predators used were zebra jumping spiders (*Salticus scenicus*) were collected along warm sunlight walls around McMaster University campus and fed laboratory flies.
   
