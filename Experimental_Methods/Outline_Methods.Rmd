@@ -35,7 +35,7 @@ All stimuli (cues) were acclimated for 3 days prior to experiment, with a spider
 
 To account for the effects of circadian rhythm on activity, two methods were used, either imposing a circadian periodicity (sin(pi x hour/12) + cos(pi x hour/12)) or fitting a natural smooth cubic spline with 5 knots (ns(hour, 5)) for hours. As both methods showed similar results with respect to the estimated parameters of interest (results not shown), only the periodicity method is used. 
 
-### Observing the Influence of Predators on Mating in *Drosophila*
+### **Observing the Influence of Predators on Mating in *Drosophila***
 
 ### Courtship Behaviours
 
