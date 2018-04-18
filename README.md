@@ -10,7 +10,7 @@ ______________________________________________________________________
   **B)** The evolved response flies selected upon by many generations of exposure to predation. 
 ______________________________________________________________________
 ______________________________________________________________________
-In this Repo, 6 sub-repositories hold the data and scripts for 6 experiments looking at the plastic (**PlasticResponse_\* **) and evolved (** EvolvedResponse_\* **) responses. 
+In this Repo, 6 sub-repositories hold the data and scripts for 6 experiments looking at the plastic (**PlasticResponse_**\*) and evolved (**EvolvedResponse_**\*) responses. 
 
 All the plots can be viewed from **ALlBehaviouralPlots.Rmd** and the summary statistics from **AllBehavioural_ModelSummary.Rmd**. 
 
