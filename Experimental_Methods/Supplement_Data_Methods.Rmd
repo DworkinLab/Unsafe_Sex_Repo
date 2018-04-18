@@ -1,0 +1,23 @@
+---
+title: "Supplementary Methods"
+output: html_document
+---
+
+## Predator Activity Experiments:
+
+  Measures of daily activity for zebra jumping spiders (*Salticus scenicus*) and Chinese praying mantids (*Tenodera aridifolia sinensis*) (Details in main experimental methods) was completed in the **DAM**, housing individual predators within a vial and measuring the activity. 
+
+## Predator Avoidance Experiments:
+
+### Popualtion Used:
+
+The *Drosophila* Genetic Reference Panel (DGRP for short) is a collection of over 200 inbred (20 generations of full-sibling mating) *Drosophila melanogaster* fly strains initiated from isofemale lines collected in a Raleigh, North Carolina Farmer's market (See Huang *et al.* 2014 and MacKay *et al.* 2012 for population details). In a study by Zwarts *et al.* (2015), severe neural defects were found within pure DGRP lineages, specifically in the mushroom bodies. These neuron defects caused by inbreeding depression are expected to have profound effects on behaviours compared to wild caught flies. To combat inbreeding depression, DGRP dihybrid lines were created by crossing 59 different DGRP lines with one common ''tester'' line (DGRP line 83), selected for its high fecundity. For each of the 59 lines, five males were placed in a vial with five virgin females from line 83 and the F1 offspring of this cross (dihybrids) were used for experimentation. All lines and dihybrids were maintained on a 12:12 light:dark cycle (lights on at 8:00am) at ~60% humidity and 25 C within vials on a molasses-cornmeal medium, with line 83 housed in bottles as well due to the increased numbers of females required for crosses.
+
+### Measuring Variability in Predator Detection/Avoidance by *Drosophila*
+
+To measure the degree to which *Drosophila* could detect and would choose to avoid spiders, flies were put into a 355 ml *Snaptite* container and given a choice between two 4.5 cm high vials, one with a spider predator present and one with no predator within. Each vial had a small layer of laboratory molasses-cornmeal-yeast media (0.5 cm) and a cut syringe tip on a lid to act as a funnel which allows flies to enter a vial, but not exit. Using the 59 *Drosophila* Genetic Reference Panel (DGRP) dihybrid lines created, adult offspring were collected and housed for two days at a 10 male to 10 female sex ratio, allowing for social and sexual interactions. Males and females were then separated into separate sex vials for 2 days. Approximately two hours before the addition of flies to the containers, the two vials were placed into the *Snaptite* container with one vial housing a spider predator. Ten same sex individuals were added randomly to a container and left for two days to enter either vial. 
+
+After 48 hours, the location of each fly was recorded (vial with spider, vial without spider, outside vials), and only those containers with at least six flies inside vials were retained in the analysis. The experiment was completed over 10 blocks, with each DGRP lineage done each day (1 male and 1 female replicate per line per day) to avoid confounding line effects with day effects. Three generalized linear mixed models (package ''*lme4*'') were used, in particular a logistic model and a comparison of complex to simpler mixed models using a parametric bootstrap method (R package ''*pbkrtest*'', V.0.4.7). To asses the random effects, and in particular whether evidence is present for genetic variation in DGRP lineages, a parametric bootstrap was done. Specifically, a comparison between two models was completed, looking at the full model above compared to the removal of sex random effects, or the removal of both sex and DGRP random effects. 
+
+
+
