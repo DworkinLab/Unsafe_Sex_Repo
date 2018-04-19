@@ -73,4 +73,6 @@
   
   act_hour$Treatment <- as.factor(act_hour$Treatment)
   act_hour$light <- as.factor(act_hour$light)
+
+  summary(act_hour$individual)  
   

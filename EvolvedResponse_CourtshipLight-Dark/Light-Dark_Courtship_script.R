@@ -19,6 +19,7 @@
   
   court$Phase <- as.factor(court$Phase)
 
+  summary(court)
 ### Run glm on proportion of time courting in 15 minutes:
   stuff2 <- lmer(P_court ~ Treatment*Phase + Observer + 
                    (1|Day) + (1|Treatment:Population), 

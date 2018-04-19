@@ -140,7 +140,7 @@
   
 # Plot both into two panels: 
 multiplot(gg_courtProp2, gg_courtcount2, cols=2)
-
+# N = 64 per treatment
 ## Attempt to facet wrap: 
 #Xcx <- rbind(corcount_eff, corprop_eff)  
 

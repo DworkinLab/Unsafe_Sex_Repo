@@ -26,14 +26,14 @@ source('Cricket-Spider_ActivityAnalysis.R')
 multiplot(spider_plot3, spi_plot3, cols = 2)
 ```
 
-**Fig X.** **Left**: Light and dark hourly activity counts over a 24 hour experiment for spider cues (triangle) compared to no cue controls (square), with error bars representing the upper and lower 95% confidence interval. **Right**: Hourly activity counts for male *Drosophila* over 24 hours between vials conditioned with spider cues and vials conditioned with no cues. Lights were on from 10AM to 10PM (yellow rectangle) and the shaded region around the line represents the 95% confidence interval for the line of best fit (loess spline).
+**Fig X.** **Left**: Light and dark hourly activity counts over a 24 hour experiment for spider cues (triangle, N=16) compared to no cue controls (square, N=16), with error bars representing the upper and lower 95% confidence interval. **Right**: Hourly activity counts for male *Drosophila* over 24 hours between vials conditioned with spider cues and vials conditioned with no cues. Lights were on from 10AM to 10PM (yellow rectangle) and the shaded region around the line represents the 95% confidence interval for the line of best fit (loess spline) with 16 indivduals monitored per treatment.
 
 ### Mantid Cues vs. Control (no cues)
 ```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
 multiplot(mantid_plot4, Man_plot3, cols = 2)
 ```
 
-**Fig X.** **Left**: Hourly activity counts of *Drosophila* during the light or dark phase of the 24 hour experiment when exposed to mantid cues (diamond) compared to no cue controls (square), with error bars representing the upper and lower 95% confidence interval. **Right**: Hourly activity of male *Drosophila* over 24 hours between vials conditioned with mantid cues and no cue control vials. The yellow rectangle represents the lights being on (10AM to 10PM) and the shaded region around the line represents the 95% confidence interval for this loess spline.
+**Fig X.** **Left**: Hourly activity counts of *Drosophila* during the light or dark phase of the 24 hour experiment when exposed to mantid cues (diamond) compared to no cue controls (square), with error bars representing the upper and lower 95% confidence interval (N=16). **Right**: Hourly activity of male *Drosophila* over 24 hours between vials conditioned with mantid cues and no cue control vials (N=16). The yellow rectangle represents the lights being on (10AM to 10PM) and the shaded region around the line represents the 95% confidence interval for this loess spline.
 
 
 ### Cricket Cues vs. Spider Cues
@@ -41,14 +41,14 @@ multiplot(mantid_plot4, Man_plot3, cols = 2)
 multiplot(Exp2_plot4, plot_Exp2_3, cols = 2)
 ```
 
-**Fig X.** **Left**: Hourly counts for light and dark activity over a 24 hours for spider cues (triangle) compared to cricket controls (circle), with error bars representing the upper and lower 95% confidence interval. **Right**: Comparison between spider and cricket olfactory cues on the hourly activity of *Drosophila* over 24 hours, with times of light (10AM to 10PM, yellow region) and times of dark (10PM to 10AM). Lines represent the treatments loess spline, the line of best fit for the activity trends throughout the 24 hours, with shaded regions representing the 95% confidence interval.
+**Fig X.** **Left**: Hourly counts for light and dark activity over a 24 hours for spider cues (triangle, N=16) compared to cricket controls (circle, N=16), with error bars representing the upper and lower 95% confidence interval. **Right**: Comparison between spider and cricket olfactory cues (N=16) on the hourly activity of *Drosophila* over 24 hours, with times of light (10AM to 10PM, yellow region) and times of dark (10PM to 10AM). Lines represent the treatments loess spline, the line of best fit for the activity trends throughout the 24 hours, with shaded regions representing the 95% confidence interval.
 
 ### Spiders fed Flies vs. Crickets vs. Flies vs. Spiders fed Crickets
 ```{r, warning=FALSE, echo=FALSE, fig.width=12.5, fig.height=5}
 multiplot(Exp3_plot3, plot_Exp3_3, cols = 2)
 ```
 
-**Fig X.** **Left**: Four cues used for the comparison of light vs dark hourly activity (phase), either crickets (circle), “stimuli” flies (hollow circle), spiders fed crickets (hollow triangle) and spiders fed flies (triangle). Error bars represent 95% confidence interval. **Right**: The hourly activity over 24 hours for *Drosophila* exposed to different cues from either crickets, “stimuli” flies, spiders fed crickets and spiders fed flies. The yellow region shows times of light, and the loess splines for each treatment have the 95% confidence interval around them (shaded region).
+**Fig X.** **Left**: Four cues used for the comparison of light vs dark hourly activity (phase), either crickets (circle, N=11), “stimuli” flies (hollow circle, N=15), spiders fed crickets (hollow triangle, N=16) and spiders fed flies (triangle, N=15). Error bars represent 95% confidence interval. **Right**: The hourly activity over 24 hours for *Drosophila* exposed to different cues from either crickets, “stimuli” flies, spiders fed crickets and spiders fed flies (N=11, 15, 16 and 15 respectivly). The yellow region shows times of light, and the loess splines for each treatment have the 95% confidence interval around them (shaded region).
 
 ________________________________________________________________
 ________________________________________________________________
@@ -65,8 +65,7 @@ source('Evolved_Activity_Analysis.R')
 multiplot(Evolve_plot4, LT_plot3, cols = 2)
 ```
 
-**Fig X.** **Left**: The hourly activity of *Drosophila* during 12 hours in light and 12 hours in darkness for the predatory evolved populations of no predation controls (square), spider predation selection (triangle) and mantid predation selection (dimond). Error bars represent the 95% confidence interval. **Right**: The baseline hourly activity over 24 hours for 12 populations of experimentally evolved populations of *Drosophila*, with 4 replicates of each treatment. Selection treatments had populations experiencing either no selection (controls), selection from zebra jumping spiders (spiders) or selection from Chinese praying mantids (mantids). Each treatment has an associated spline, fitting the data to a best fit line of daily activity trends. The yellow region indicates the flies were experiencing lighted conditions. Shaded region around spline represent the 95% confidence interval.
-
+**Fig X.** **Left**: The hourly activity of *Drosophila* during 12 hours in light and 12 hours in darkness for the predatory evolved populations of no predation controls (square), spider predation selection (triangle) and mantid predation selection (dimond) (N=80). Error bars represent the 95% confidence interval. **Right**: The baseline hourly activity over 24 hours for 12 populations of experimentally evolved populations of *Drosophila*, with 4 replicates of each treatment. Selection treatments had populations experiencing either no selection (controls), selection from zebra jumping spiders (spiders) or selection from Chinese praying mantids (mantids). Each treatment has an associated spline, fitting the data to a best fit line of daily activity trends. The yellow region indicates the flies were experiencing lighted conditions. Shaded region around spline represent the 95% confidence interval. Each treatment had 80 individual flies recorded (20 per replicate).
 
 ________________________________________________________________
 ________________________________________________________________
@@ -86,7 +85,7 @@ Courtship proportion (left) and the count of courtship bouts (right) a mature ma
 multiplot(gg_courtProp2, gg_courtcount2, cols=2)
 ```
 
-**Fig X.** **Left:** The proportion of time a male *Drosophila* spent courting a female in 15 minutes of recording for flies exposed to either a zebra jumping spider predator (triangle) or no predator controls (square). **Right**: Number of independent courtship bouts a male *Drosophila* attempts in 15 minutes toward a female when exposed to either a predator (spider, triangle) or control (no predator, square). Error bars represent the 95% confidence interval.
+**Fig X.** **Left:** The proportion of time a male *Drosophila* spent courting a female in 15 minutes of recording for flies exposed to either a zebra jumping spider predator (triangle) or no predator controls (square). **Right**: Number of independent courtship bouts a male *Drosophila* attempts in 15 minutes toward a female when exposed to either a predator (spider, triangle) or control (no predator, square). Error bars represent the 95% confidence interval. 64 individual mating pairs were recorded for each treatment.
 
 ________________________________________________________________
 ________________________________________________________________
@@ -107,7 +106,7 @@ Copulation duration (middle) and latency (left) for a mature mating pair, as wel
 multiplot(gg_coplat2, gg_copdur2, gg_copprop2, cols=3)
 ```
 
-***Fig X.** **Left**: *Drosophila* mating pair time (seconds) to begin copulating after introduction when exposed to either a spider predator or no predator controls. **Middle**: Length of a copulation bout (seconds) between a male and female *Drosophila* when exposed to a predator or without a predator. **Right**: Proportion of successful copulations of a male and female mating pair of *Drosophila* in 30 minutes with either a spider or no spider present. Error bars are the 95% confidence interval. Squares represent controls, triangles the predaton (spider) treatments.
+***Fig X.** **Left**: *Drosophila* mating pair time (seconds) to begin copulating after introduction when exposed to either a spider predator (N=39) or no predator controls (N=41). **Middle**: Length of a copulation bout (seconds) between a male and female *Drosophila* when exposed to a predator(N=39) or without a predator (N=41). **Right**: Proportion of successful copulations of a male and female mating pair of *Drosophila* in 30 minutes with either a spider (N=70) or no spider present (N=72). Error bars are the 95% confidence interval. Squares represent controls, triangles represent the predaton (spider) treatments.
 
 ________________________________________________________________
 ________________________________________________________________
@@ -130,9 +129,7 @@ Age Bins correspond number of days old the flies were: 1) 1-3, 2) 4-7, 3) 8-11 a
 multiplot(latenCourt2, LatenCop2, DuratCop2, propCop3, cols=2)
 ```
 
-**Fig X.** Measures of courtship latency (**top left**), copulation latency (**top right**), copulation duration (**bottom left**) and proportion of successful copulatons (**bottom right**). Latencies and durations are represented in seconds based on the observed initation times (latency) and lengths (durtion). ge bins correspond to a range
-of ages flies may fall into, with 1 = 1–3 days old, 2 = 4–7 days, 3 = 8–11 days and 4
-= 12–15 days. Mating behaviours measured fora mating pair of *Drosophila* from three selection treatments: no predation (square), mantid selection (diamond) or spider selection (triangle), with error bars representing 95% confidence intervals. 
+**Fig X.** Measures of courtship latency (**top left**), copulation latency (**top right**), copulation duration (**bottom left**) and proportion of successful copulatons (**bottom right**). Latencies and durations are represented in seconds based on the observed initation times (latency) and lengths (durtion). Age bins correspond to a range of ages flies may fall into, with 1 = 1–3 days old, 2 = 4–7 days, 3 = 8–11 days and 4 = 12–15 days. Mating behaviours measured fora mating pair of *Drosophila* from three selection treatments: no predation (square), mantid selection (diamond) or spider selection (triangle), with error bars representing 95% confidence intervals. Age Bins 1, 2 and 3 had 28 mating pairs observed for each treatment, with age bin 4 having 24 mating pairs observed for Mantid and Spider populations and 23 for controls. 
 
 
 ________________________________________________________________
@@ -150,4 +147,4 @@ source('Light-Dark_Courtship_script.R')
 print(stuff_plot2)
 ```
 
-**Fig X.** The proportion of time courting in 15 minutes during the dark or light phase for evolved populations with either mantid predation selection (diamond), spider predation selection (triangle) and no selection controls(square), with 95% confidence intervals shown.
+**Fig X.** The proportion of time courting in 15 minutes during the dark or light phase for evolved populations with either mantid predation selection (diamond, N=63), spider predation selection (triangle, N=63) and no selection controls(square, N=61), with 95% confidence intervals shown.

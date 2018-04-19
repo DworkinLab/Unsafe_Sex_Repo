@@ -73,3 +73,7 @@ source('packages.R')
                                      "Control", "Spiders"))
   AP_Data$Treatment <- as.factor(AP_Data$Treatment)
 
+
+AP_Group_2 <- AP_Data %>%
+  group_by(Treatment, AgeBin) %>%
+  summarise(countss=n())

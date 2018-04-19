@@ -79,3 +79,5 @@
   Mantid_hour$Treatment <- as.factor(Mantid_hour$Treatment)
   Mantid_hour$light <- as.factor(Mantid_hour$light)
   
+
+  

@@ -61,7 +61,6 @@ source('packages.R')
 
 # Combine into one data set:
   Exp3_long <- rbind(Exp3_Mon1_long, Exp3_Mon2_long)
-
   Exp3_long$monitor <- as.factor(Exp3_long$monitor)
   Exp3_long$Treatment <- as.factor(Exp3_long$Treatment)
   Exp3_long$day <- as.factor(Exp3_long$day)
@@ -87,4 +86,6 @@ source('packages.R')
   Exp3_hour <- within(Exp3_hour, {Cues = ifelse (Treatment == "C", "Cricket", ifelse(Treatment == "F", "Fly", ifelse(Treatment == "SC", "Spider Fed Crickets", "Spider Fed Flies")))})
   
   Exp3_hour$Cues <- as.factor(Exp3_hour$Cues)
+  
+  summary(Exp3_hour$individual)
   

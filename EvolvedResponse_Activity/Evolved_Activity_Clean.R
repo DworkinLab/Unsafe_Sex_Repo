@@ -72,3 +72,4 @@ dat.hourly <- within(dat.hourly, {
 dat.hourly$Predation <- as.factor(dat.hourly$Predation)
 dat.hourly$light <- as.factor(dat.hourly$light)
 dat.hourly$Treatment <- dat.hourly$Predation
+
