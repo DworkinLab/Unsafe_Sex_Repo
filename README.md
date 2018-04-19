@@ -5,9 +5,10 @@ ______________________________________________________________________
 
 ### The goal of these experiments are to determine:
 
-  **A)** The plastice response *Drosophila melanogaster* show toward a percieved threat from predators, specifically zebra jumping spiders (*Salticus scenicus*) and Chinese praying mantids (*Tenodera aridifolia sinensis*)
+  **A)** The plastice response *Drosophila melanogaster* flies show toward a percieved threat from predators, specifically zebra jumping spiders (*Salticus scenicus*) and Chinese praying mantids (*Tenodera aridifolia sinensis*).
   
-  **B)** The evolved response flies selected upon by many generations of exposure to predation. 
+  **B)** The evolved response flies selected upon by many generations of exposure to predation.
+  
 ______________________________________________________________________
 ______________________________________________________________________
 
