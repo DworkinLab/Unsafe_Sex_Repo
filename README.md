@@ -14,7 +14,7 @@ ______________________________________________________________________
 
   In this Repo, 6 sub-repositories hold the data and scripts for 6 experiments looking at the plastic (**PlasticResponse_**\*) and evolved (**EvolvedResponse_**\*) responses. 
 
-  All the plots can be viewed from **ALlBehaviouralPlots.Rmd** and the summary statistics from **AllBehavioural_ModelSummary.Rmd**. 
+  All the plots can be viewed by running **ALlBehaviouralPlots.Rmd** and the summary statistics from **AllBehavioural_ModelSummary.Rmd**. 
 
   Methods are present in **Experimental_Methods** repo and some supplementary data can be found in its own repo as well (**Supplement_Data**).  
   
