@@ -148,3 +148,9 @@ print(stuff_plot2)
 ```
 
 **Fig X.** The proportion of time courting in 15 minutes during the dark or light phase for evolved populations with either mantid predation selection (diamond, N=63), spider predation selection (triangle, N=63) and no selection controls(square, N=61), with 95% confidence intervals shown.
+
+________________________________________________________________
+________________________________________________________________
+
+________________________________________________________________
+________________________________________________________________
