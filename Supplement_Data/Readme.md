@@ -18,6 +18,10 @@
   
 ### Additional Information:
 
+  **Images**
+  
+  Some images taken during experiments for an idea of the layout of the activity monitor and the plastic courtship/copulation recordings. 
+  
   **Plastic Courtship and Copulation Videos**
   
   Figshare has all videos taken of mating pairs with ~15 minute videos of courtship and ~30 minute videos of copulation. Also has short clips of mating pairs showing courtship and copulation behaviours. There is also examples of a mating pair responding to preators, showing some behaviours believed to be in response to predators. 
