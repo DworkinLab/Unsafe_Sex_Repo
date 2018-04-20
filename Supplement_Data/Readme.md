@@ -20,10 +20,7 @@
 
   **Plastic Courtship and Copulation Videos**
   
-  Figshare has all videos taken of mating pairs with ~15 minute videos of courtship and ~30 minute videos of copulation
-  
-  Will add to figshare short clips of mating pairs showing courtship and copulation behaviours
-  
-  Will add to figshare videos of pairs responding to predators in assay chamber
-  
+  Figshare has all videos taken of mating pairs with ~15 minute videos of courtship and ~30 minute videos of copulation. Also has short clips of mating pairs showing courtship and copulation behaviours. There is also examples of a mating pair responding to preators, showing some behaviours believed to be in response to predators. 
+
+[Link](https://figshare.com/collections/Plastic_Response_of_Drosophila_Mating_Behaviours_with_or_without_predators_/4076162)
   
